@@ -1,0 +1,106 @@
+@import 'normalize.css';
+@import 'fonts.less';
+@import 'variables.less';
+
+body {
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: @main-dark;
+  padding: @medium-offset @small-offset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: @xs-offset;
+  text-decoration: none;
+
+  &__title {
+    color: @white-color;
+    font-size: @extra-large;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: @large-offset;
+  padding: @large-offset @small-offset;
+}
+
+.routes-content {
+  max-width: 30%;
+  width: 100%;
+
+  &__title {
+    margin: 0 0 @small-offset 0;
+    color: @main-dark;
+    font-size: @large;
+  }
+
+  &__subtitle {
+    margin: 0 0 @extra-large-offset 0;
+    color: @secondary-gray;
+    font-size: @medium;
+  }
+}
+
+.map-section {
+  width: 100%;
+  position: 'relative';
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  table
+  thead.ant-table-thead
+  .ant-table-cell {
+  background-color: @light-gray;
+  color: @secondary-gray;
+}
+
+.routes-table_first-column-text {
+  margin: 0; 
+  color: @accent-blue;
+  font-size: @medium; 
+  font-weight: 600; 
+}
+
+.routes-table__row:hover td  {
+  background: @semi-light-blue!important;
+}
+
+.routes-table__row_active {
+  background-color: @light-blue;
+}
